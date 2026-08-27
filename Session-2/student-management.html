@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+  </head>
+  <body>
+    <header>
+      <h1>Student Management System</h1>
+      <hr />
+    </header>
+
+    <nav>
+      <a href="#">Home |</a>
+      <a href="#student">Students |</a>
+      <a href="#add">Add Students |</a>
+      <a href="#course">Course |</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="student">
+        <hr />
+        <h2>Student List</h2>
+        <hr />
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Grade</th>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td>Het Shah</td>
+            <td>het@gmail.com</td>
+            <td>B.Tech</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Rahul Patel</td>
+            <td>rahul@gmail.com</td>
+            <td>BCA</td>
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Shreeya Shah</td>
+            <td>shreeya@gmail.com</td>
+            <td>B.Com</td>
+            <td>B+</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="add">
+        <hr />
+        <h2>Add Student</h2>
+        <hr />
+        <form>
+          <label for="id">Student ID : </label>
+          <input type="number" id="id" />
+          <br />
+          <br />
+
+          <label for="name">Student Name : </label>
+          <input type="text" id="name" />
+          <br />
+          <br />
+
+          <label for="email">Student Email : </label>
+          <input type="email" id="email" />
+          <br />
+          <br />
+
+          <label for="phone">Student Phone : </label>
+          <input type="tel" id="phone" />
+          <br />
+          <br />
+
+          <span>Gender : </span>
+          <input type="radio" value="male" id="male" name="gender" />
+          <label for="male">Male</label>
+          <input type="radio" value="female" id="female" name="gender" />
+          <label for="female">Female</label>
+          <input type="radio" value="others" id="others" name="gender" />
+          <label for="others">Others</label>
+          <br />
+          <br />
+
+          <label for="course">Course : </label>
+          <select id="course">
+            <option value="B.Tech">B.Tech</option>
+            <option value="BCA">BCA</option>
+            <option value="MCA">MCA</option>
+            <option value="M.Tech">M.Tech</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="dob">Date of Birth : </label>
+          <input type="date" id="dob" />
+          <br />
+          <br />
+
+          <label for="address">Address : </label>
+          <textarea
+            id="address"
+            rows="2"
+            cols="50"
+            placeholder="Address goes here..."></textarea>
+          <br />
+          <br />
+
+          <input type="submit" />
+          <input type="reset" />
+        </form>
+      </section>
+
+      <section id="course">
+        <hr />
+        <h2>Course List</h2>
+        <hr />
+        <ul>
+          <li>B.Tech</li>
+          <li>BCA</li>
+          <li>M.Tech</li>
+          <li>MCA</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <hr />
+      <h3>Footer</h3>
+      <hr />
+      <span>&copy; 2026 Student Management System</span>
+    </footer>
+  </body>
+</html>
