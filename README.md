@@ -10,9 +10,9 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 
 | Day   | Date     | Topic                  |
 | ----- | -------- | ---------------------- |
-| Day 1 | 25/08/26 | Git & GitHub Practice  |
-| Day 2 | 26/08/26 | Basic HTML Tags        |
-| Day 3 | 27/08/26 | Remaining HTML & XHTML |
+| Day 1 | 25/08/26 | Git & GitHub Practice (Session-1) |
+| Day 2 | 26/08/26 | Basic HTML Tags (Session-2) |
+| Day 3 | 27/08/26 | Remaining HTML & XHTML (Session-2) |
 
 ## 🎯 Purpose
 
