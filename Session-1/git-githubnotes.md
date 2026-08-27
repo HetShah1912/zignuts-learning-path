@@ -1125,4 +1125,3 @@ Merge
 **Lecture:** Complete Git and GitHub Tutorial for Beginners — Apna College
 **Video:** https://youtu.be/Ez8F0nW6S-w
 
-The official Apna College notes page also provides Git-related study resources.
