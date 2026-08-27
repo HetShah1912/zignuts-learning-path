@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Basics</title>
+  </head>
+
+  <body>
+
+    <!-- Heading Tags -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- Paragraph -->
+    <p>This is a paragraph.</p>
+
+    <!-- Line Break -->
+    <p>Hello<br />World</p>
+
+    <!-- Horizontal Line -->
+    <hr />
+
+    <!-- Text Formatting -->
+    <b>Bold Text</b>
+    <strong>Important Text</strong>
+
+    <i>Italic Text</i>
+    <em>Emphasized Text</em>
+
+    <u>Underlined Text</u>
+
+    <mark>Highlighted Text</mark>
+
+    <small>Small Text</small>
+
+    <del>Deleted Text</del>
+
+    <ins>Inserted Text</ins>
+
+    H<sub>2</sub>O X<sup>2</sup>
+
+    <!-- Links -->
+
+    <h2>Links</h2>
+
+    <a href="https://www.google.com">Visit Google</a>
+
+    <br /><br />
+
+    <a href="https://www.google.com" target="_blank">
+      Open Google in New Tab
+    </a>
+
+    <!-- Image -->
+
+    <h2>Image</h2>
+
+    <img src="image.jpg" alt="Sample Image" width="300" height="200" />
+
+    <!-- List -->
+
+    <h2>Unordered List</h2>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+
+    <ol>
+      <li>Learn HTML</li>
+      <li>Learn CSS</li>
+      <li>Learn JavaScript</li>
+    </ol>
+
+    <h2>Ordered List with Different Types</h2>
+
+    <ol type="A">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <ol type="a">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <ol type="I">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <ol type="i">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ol>
+
+    <h2>Description List</h2>
+
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+
+      <dt>JS</dt>
+      <dd>JavaScript</dd>
+    </dl>
+
+    <!-- Nested List -->
+
+    <h2>Nested List</h2>
+
+    <ul>
+      <li>
+        Frontend
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </li>
+
+      <li>
+        Backend
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>Node.js</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Table -->
+
+    <h2>Table</h2>
+
+    <table border="1">
+      <caption>
+        Student Information
+      </caption>
+
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Rahul</td>
+          <td>HTML</td>
+          <td>85</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Amit</td>
+          <td>CSS</td>
+          <td>90</td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>Priya</td>
+          <td>JavaScript</td>
+          <td>88</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3">Average</td>
+          <td>87.6</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Rowspan and Colspan -->
+
+    <h2>Rowspan and Colspan</h2>
+
+    <table border="1">
+      <tr>
+        <th colspan="2">Student Details</th>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Name</td>
+        <td>Rahul</td>
+      </tr>
+
+      <tr>
+        <td>Shah</td>
+      </tr>
+    </table>
+
+    <!-- Form -->
+
+    <h2>Registration Form</h2>
+
+    <form action="/submit" method="post">
+      <!-- Text -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <br /><br />
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <br /><br />
+
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+
+      <br /><br />
+
+      <!-- Number -->
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" />
+
+      <br /><br />
+
+      <!-- Date -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+
+      <br /><br />
+
+      <!-- Radio Buttons -->
+      <p>Gender:</p>
+
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label>
+
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+
+      <br /><br />
+
+      <!-- Checkboxes -->
+      <p>Skills:</p>
+
+      <input type="checkbox" id="html" name="skills" value="html" />
+      <label for="html">HTML</label>
+
+      <input type="checkbox" id="css" name="skills" value="css" />
+      <label for="css">CSS</label>
+
+      <input type="checkbox" id="js" name="skills" value="javascript" />
+      <label for="js">JavaScript</label>
+
+      <br /><br />
+
+      <!-- Dropdown -->
+      <label for="course">Choose Course:</label>
+
+      <select id="course" name="course">
+        <option value="">Select Course</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+      </select>
+
+      <br /><br />
+
+      <!-- Textarea -->
+      <label for="message">Message:</label>
+      <br />
+
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        cols="30"
+        placeholder="Enter your message">
+      </textarea>
+
+      <br /><br />
+
+      <!-- File -->
+      <label for="file">Upload File:</label>
+      <input type="file" id="file" name="file" />
+
+      <br /><br />
+
+      <!-- Color -->
+      <label for="color">Choose Color:</label>
+      <input type="color" id="color" name="color" />
+
+      <br /><br />
+
+      <!-- Range -->
+      <label for="range">Experience:</label>
+      <input type="range" id="range" name="experience" />
+
+      <br /><br />
+
+      <!-- URL -->
+      <label for="website">Website:</label>
+      <input type="url" id="website" name="website" />
+
+      <br /><br />
+
+      <!-- Hidden -->
+      <input type="hidden" name="userId" value="123" />
+
+      <!-- Submit -->
+      <input type="submit" value="Submit" />
+
+      <!-- Reset -->
+      <input type="reset" value="Reset" />
+
+      <!-- Button -->
+      <button type="button">Click Me</button>
+    </form>
+
+    <!-- Semantic Tags -->
+
+    <h2>Semantic Tags</h2>
+
+    <header>Header Content</header>
+
+    <nav>Navigation</nav>
+
+    <main>
+      Main Content
+
+      <section>Section Content</section>
+
+      <article>Article Content</article>
+
+      <aside>Aside Content</aside>
+    </main>
+
+    <footer>Footer Content</footer>
+  </body>
+</html>
