@@ -16,6 +16,7 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 4 | 28/08/26 | Session-3  | CSS Concepts  |
 | Day 5 | 29/08/26 | Session-3  | CSS Practice  |
 | Day 6 | 30/08/26 |     -      |       -       |
+| Day 7 | 31/08/26 | Session-3  | Sassy CSS     |
 
 ## 🎯 Purpose
 
