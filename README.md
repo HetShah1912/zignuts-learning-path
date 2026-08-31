@@ -13,8 +13,9 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 1 | 25/08/26 | Session-1  | Git & GitHub Practice  |
 | Day 2 | 26/08/26 | Session-2  | Basic HTML Tags |
 | Day 3 | 27/08/26 | Session-2  | HTML & XHTML  |
-| Day 4 | 28/08/26 | Session-3  | CSS Concepts & Basics Practice  |
-
+| Day 4 | 28/08/26 | Session-3  | CSS Concepts  |
+| Day 5 | 29/08/26 | Session-3  | CSS Practice  |
+| Day 6 | 30/08/26 |     -      |       -       |
 
 ## 🎯 Purpose
 
