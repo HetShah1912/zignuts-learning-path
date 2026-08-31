@@ -1,0 +1,95 @@
+// Partials
+@use './resets';
+@use './variables';
+
+// Function
+@function weight($weight-name){
+  @return map-get($map: variables.$font-weights, $key: $weight-name)
+};
+
+// Mixins
+@mixin flexCenter($direction){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+};
+
+@mixin theme($light-theme: true){
+  @if ($light-theme){
+    background: lighten(variables.$primary-color, 100%);
+    color: darken($color: variables.$text-color, $amount: 100%)
+  }
+};
+
+@mixin mobile{
+  @media (max-width: variables.$mobile) {
+    @content;
+  }
+}
+// Vanilla CSS
+// :root{
+//   --primary-color : #272727;
+//   --accent-color : #ff652f;
+//   --text-color : #fff;
+// }
+
+// SCSS Variables
+// $primary-color : #272727;
+// $accent-color : #ff652f;
+// $text-color : #fff;
+
+// Map
+// $font-weights : (
+//   "regular" : 400,
+//   "medium" : 500,
+//   "bold" : 700
+// );
+
+body {
+  // Vanilla CSS
+  // background-color: var(--primary-color);
+  
+  // SCSS
+  background: variables.$primary-color;
+  color: variables.$text-color;
+  
+}
+
+// Vanilla CSS
+// .main p{
+//   font-weight: map-get($map: $font-weights, $key: bold);
+// }
+
+.main {
+  @include flexCenter(row);
+  width: 80% - 40%;
+  margin: 0 auto;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  #{&}__paragraph1 {
+    // font-weight: map-get($map: $font-weights, $key: bold);
+    font-weight: weight(bold);
+
+     &:hover {
+      color: blue;
+    }
+  }
+
+  #{&}__paragraph2{
+    @extend .main__paragraph1;
+
+    &:hover{
+      color: variables.$accent-color;
+    }
+  }
+  @include mobile{
+    @include flexCenter(column);
+  }
+}
+
+.light{
+  @include theme($light-theme: true);
+}
