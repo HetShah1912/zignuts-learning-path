@@ -4,9 +4,47 @@
   padding: 0;
 }
 
+.home {
+  height: 100%;
+  width: 100%;
+  padding-top: 30vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(89, 60, 60, 0.9), rgba(89, 60, 60, 0.3)), url("../image/Professional-Photo.jpeg");
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+}
+.home__name {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid #fff;
+}
+.home__name:hover {
+  cursor: pointer;
+  color: #a07b6e;
+  transition: all 0.5s ease-in-out;
+}
+.home__name--last {
+  color: #a07b6e;
+}
+.home__name--last:hover {
+  cursor: pointer;
+  color: #e4d0d0;
+  transition: all 0.5s ease-in-out;
+}
+
+.content {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 body {
-  background: #272727;
-  color: #fff;
+  background: #e4d0d0;
+  color: #e4d0d0;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
@@ -17,15 +55,12 @@ h1, h2, h3 {
 }
 
 a {
-  color: #fff;
+  color: #e4d0d0;
   text-decoration: none;
 }
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  padding: 1rem;
+.text-secondary {
+  color: #a07b6e;
 }
 
 main {
@@ -39,9 +74,15 @@ main .social-icons {
 }
 main .social-icons a {
   padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
 }
 main .social-icons a:hover {
-  color: #ff652f;
+  color: #a07b6e;
+}
+
+.align {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -51,5 +92,5 @@ footer {
   right: 1rem;
   text-align: right;
   padding: 1rem;
-  color: #fff;
+  color: set-text-color(#e4d0d0);
 }/*# sourceMappingURL=main.css.map */
