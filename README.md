@@ -18,7 +18,7 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 6 | 30/08/26 | -         | -                                           |
 | Day 7 | 31/08/26 | Session-3 | SASS - Concepts                             |
 | Day 8 | 01/09/26 | Session-3 | SASS Project & Article of Responsive Design |
-| Day 9 | 02/09/26 | Session-3 |
+| Day 9 | 02/09/26 | Session-3 | Bootstrap with Project                      |
 
 ## 🎯 Purpose
 
