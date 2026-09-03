@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/fbb51f51e5.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Tailwind Practice</title>
+  </head>
+  <body class="bg-gray-500 h-full">
+    <header>
+      <nav
+        class="w-full bg-gray-800 flex flex-row text-white justify-around items-center h-20 px-5 py-4">
+        <section class="flex text-4xl justify-between w-45">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <h1>FinTrack</h1>
+        </section>
+        <ul class="flex justify-between w-150 text-2xl text-cyan-50">
+          <li class="hover:cursor-pointer hover:text-gray-300">Dashboard</li>
+          <li class="hover:cursor-pointer hover:text-gray-300">Transactions</li>
+          <li class="hover:cursor-pointer hover:text-gray-300">Settings</li>
+          <li class="hover:cursor-pointer hover:text-gray-300">Profile</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="hero flex flex-col text-gray-100 h-100 justify-center items-center m-auto">
+        <section class="w-200 h-100 flex flex-col items-center justify-center">
+          <h2 class="text-6xl">Good Morning, Het!</h2>
+          <p class="text-4xl mt-12">Here is your Financial Overview</p>
+        </section>
+      </section>
+
+      <section
+        class="grid grid-cols-4 gap-4 justify-evenly items-center w-300 mx-auto my-10 h-50">
+        <div
+          class="cards border-6 border-gray-700 h-full bg-slate-900 text-white rounded-3xl p-4 flex flex-col justify-center items-center">
+          <h3 class="text-3xl mb-8">Balance</h3>
+          <div>
+            <span class="text-2xl text-yellow-500">₹ 84,500</span>
+            <span class="text-green-600 text-2xl">(+12% &uarr;)</span>
+          </div>
+        </div>
+        <div
+          class="cards border-6 border-gray-700 h-full bg-slate-900 text-white rounded-3xl p-4 flex flex-col justify-center items-center">
+          <h3 class="text-3xl mb-8">Income</h3>
+          <div>
+            <span class="text-2xl text-yellow-500">₹ 65,000</span>
+            <span class="text-green-600 text-2xl">(+8.5% &uarr;)</span>
+          </div>
+        </div>
+        <div
+          class="cards border-6 border-gray-700 h-full bg-slate-900 text-white rounded-3xl p-4 flex flex-col justify-center items-center">
+          <h3 class="text-3xl mb-8">Expense</h3>
+          <div>
+            <span class="text-2xl text-yellow-500">₹ 32,400</span>
+            <span class="text-red-600 text-2xl">(-4.5% &darr;)</span>
+          </div>
+        </div>
+        <div
+          class="cards border-6 border-gray-700 h-full bg-slate-900 text-white rounded-3xl p-4 flex flex-col justify-center items-center">
+          <h3 class="text-3xl mb-8">Savings</h3>
+          <div>
+            <span class="text-2xl text-yellow-500">₹ 32,500</span>
+            <span class="text-green-600 text-2xl">(+15% &uarr;)</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="w-300 grid grid-cols-3 gap-4 justify-evenly items-center mx-auto my-10 h-100">
+        <div
+          class="col-span-2 border-6 border-gray-700 h-full bg-slate-900 text-white p-8 rounded-3xl">
+          <h2 class="text-3xl mb-5 font-extrabold">Spending Overview</h2>
+          <h3 class="text-xl mb-5 font-bold">Monthly Breakdown</h3>
+          <div class="item">
+            <span
+              >Total : ₹32,400 / ₹50,000
+              <span class="text-yellow-500">(65%)</span></span
+            >
+            <section class="w-170 h-6 bg-white rounded-lg mt-3">
+              <section class="h-full w-110 bg-blue-500 rounded-lg"></section>
+            </section>
+          </div>
+          <div class="item mt-5">
+            <span>Food : ₹8200 <span class="text-yellow-500">(80%)</span></span>
+            <section class="w-170 h-6 bg-white rounded-lg mt-3">
+              <section class="h-full w-136 bg-blue-500 rounded-lg"></section>
+            </section>
+          </div>
+          <div class="item mt-5">
+            <span
+              >Shopping : ₹5600 <span class="text-yellow-500">(90%)</span></span
+            >
+            <section class="w-170 h-6 bg-white rounded-lg mt-3">
+              <section class="h-full w-153 bg-blue-500 rounded-lg"></section>
+            </section>
+          </div>
+        </div>
+
+        <div
+          class="border-6 border-gray-700 h-full bg-slate-900 text-white p-8 rounded-3xl">
+          <h2 class="text-3xl font-extrabold mb-10">Expense Breakdown</h2>
+          <div class="list flex w-60 m-auto justify-between text-xl">
+            <div class="item">
+              <i class="fa-solid fa-burger"></i>
+              <span>Food</span>
+            </div>
+            <span>32%</span>
+          </div>
+          <div class="list flex w-60 m-auto mt-5 justify-between text-xl">
+            <div class="item">
+              <i class="fa-solid fa-house"></i>
+              <span>Housing</span>
+            </div>
+            <span>28%</span>
+          </div>
+          <div class="list flex w-60 m-auto mt-5 justify-between text-xl">
+            <div class="item">
+              <i class="fa-solid fa-car"></i>
+              <span>Transport</span>
+            </div>
+            <span>18%</span>
+          </div>
+          <div class="list flex w-60 m-auto mt-5 justify-between text-xl">
+            <div class="item">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Shopping</span>
+            </div>
+            <span>12%</span>
+          </div>
+          <div class="list flex w-60 m-auto mt-5 justify-between text-xl">
+            <div class="item">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>Others</span>
+            </div>
+            <span>10%</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-300 m-auto h-100 bg-slate-900 border-8 border-gray-700 rounded-lg p-8 text-white">
+        <div class="title flex w-full justify-between">
+          <h2 class="text-4xl font-extrabold">Recent Transactions</h2>
+          <button class="bg-white text-slate-700 w-40 text-lg h-10 border-4 border-gray-700 rounded-lg cursor-pointer font-semibold">+ Add Expenses</button>
+        </div>
+        <div class="transactions flex flex-col">
+          <div class="titem w-200 mx-auto flex justify-between mt-12 text-2xl font-semibold">
+            <div class="mitem flex justify-between w-40">
+              <i class="fa-solid fa-utensils"></i>
+              <span class="w-20">Dinner</span>
+            </div>
+            <span class="text-lime-500">Today</span>
+            <span class="text-red-600">-₹850</span>
+          </div>
+          <div class="titem w-200 mx-auto flex justify-between mt-8 text-2xl font-semibold">
+            <div class="mitem flex justify-between w-40">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span class="w-20">Shopping</span>
+            </div>
+            <span class="text-lime-500">Yesterday</span>
+            <span class="text-red-600">-₹2,450</span>
+          </div>
+          <div class="titem w-200 mx-auto flex justify-between mt-8 text-2xl font-semibold">
+            <div class="mitem flex justify-between w-40">
+              <i class="fa-solid fa-person-biking"></i>
+              <span class="w-20">Riding</span>
+            </div>
+            <span class="text-lime-500">Aug 31</span>
+            <span class="text-red-600">-₹420</span>
+          </div>
+          <div class="titem w-200 mx-auto flex justify-between mt-8 text-2xl font-semibold">
+            <div class="mitem flex justify-between w-40">
+              <i class="fa-solid fa-tv"></i>
+              <span class="w-20">Netflix</span>
+            </div>
+            <span class="text-lime-500">Aug 30</span>
+            <span class="text-red-600">-₹649</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="w-full bg-slate-900 h-30 mt-10 text-white flex justify-center items-center">
+      <h2 class="text-4xl font-extrabold">Thank You! &copy; Het Shah</h2>
+    </footer>
+  </body>
+</html>
