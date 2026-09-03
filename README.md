@@ -8,18 +8,18 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 
 ## 📚 Learning Progress
 
-| Day    | Date     | Session   | Topic                                       |
-| ------ | -------- | --------- | ------------------------------------------- |
-| Day 1  | 25/08/26 | Session-1 | Git & GitHub Practice                       |
-| Day 2  | 26/08/26 | Session-2 | Basic HTML Tags                             |
-| Day 3  | 27/08/26 | Session-2 | HTML & XHTML                                |
-| Day 4  | 28/08/26 | Session-3 | CSS Concepts                                |
-| Day 5  | 29/08/26 | Session-3 | CSS Practice                                |
-| Day 6  | 30/08/26 | -         | -                                           |
-| Day 7  | 31/08/26 | Session-3 | SASS - Concepts                             |
-| Day 8  | 01/09/26 | Session-3 | SASS Project & Article of Responsive Design |
-| Day 9  | 02/09/26 | Session-3 | Bootstrap with Project                      |
-| Day 10 | 03/09/26 | Session-3 | Tailwind Project & Figma Basics             |
+| Day    | Date     | Session   | Topic                                                 |
+| ------ | -------- | --------- | ----------------------------------------------------- |
+| Day 1  | 25/08/26 | Session-1 | Git & GitHub Practice                                 |
+| Day 2  | 26/08/26 | Session-2 | Basic HTML Tags                                       |
+| Day 3  | 27/08/26 | Session-2 | HTML & XHTML                                          |
+| Day 4  | 28/08/26 | Session-3 | CSS Concepts                                          |
+| Day 5  | 29/08/26 | Session-3 | CSS Practice                                          |
+| Day 6  | 30/08/26 | -         | -                                                     |
+| Day 7  | 31/08/26 | Session-3 | SASS - Concepts                                       |
+| Day 8  | 01/09/26 | Session-3 | SASS Project & Article of Responsive Design           |
+| Day 9  | 02/09/26 | Session-3 | Bootstrap with Project                                |
+| Day 10 | 03/09/26 | Session-3 | Tailwind Project & Figma Basics, Read Seahawk Article |
 
 ## 🎯 Purpose
 
