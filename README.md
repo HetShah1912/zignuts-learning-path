@@ -21,7 +21,8 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 9  | 02/09/26 | Session-3 | Bootstrap with Project                                |
 | Day 10 | 03/09/26 | Session-3 | Tailwind Project & Figma Basics, Read Seahawk Article |
 | Day 11 | 04/09/26 | Session-3 | Figma Project : From Design to Code                   |
-| Day 12 | 05/09/26 | Session-4 | Started JS Concepts                                   |
+| Day 12 | 05/09/26 | Session-4 | JS Concepts                                           |
+| Day 13 | 06/09/26 | Session-4 | JS Concepts                                           |
 
 ## 🎯 Purpose
 
