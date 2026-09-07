@@ -1,3 +1,4 @@
+// Data Type Practice
 // Number
 let numberLength = 16;
 let numberWeight = 7.5;
