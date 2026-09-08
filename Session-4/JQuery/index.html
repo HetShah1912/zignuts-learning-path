@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // Checking document is loaded or not
+      $(document).ready(function () {
+        // // Selecting button element which has hide as id and handle the click event of it
+        // $("#hide").click(function () {
+        //   // Selecting p element and hide it when button is clicked
+        //   $("p").hide();
+        // });
+
+        // $("#show").click(function () {
+        //   $("p").show();
+        // });
+        $("#btn").click(function () {
+          $("p").toggle();
+        });
+
+        // Multiple Event on Single element
+        $("p").on({
+          mouseenter: function () {
+            $(this).css("background-color", "lightgray");
+          },
+          mouseleave: function () {
+            $(this).css("background-color", "lightblue");
+          },
+          click: function () {
+            $(this).css("background-color", "yellow");
+          },
+        });
+
+        // HTML DOM Manipulation
+        $("#btn1").click(function () {
+          alert("Text" + $("#test").text());
+        });
+
+        $("#btn2").click(function () {
+          alert("HTML" + $("#test").html());
+        });
+
+        function appendText() {
+          var txt1 = "<p id='para'>Text.</p>"; // Create element with HTML
+          var txt2 = $("<p></p>").text("Text."); // Create with jQuery
+          var txt3 = document.createElement("p"); // Create with DOM
+          txt3.innerHTML = "Text.";
+          $("body").append(txt1, txt2, txt3); // Append the new elements
+        }
+
+        $("#append").click(function() {
+          appendText();
+        })
+        
+      });
+    </script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <!-- <button id="hide">Hide</button>
+    <button id="show">Show</button> -->
+    <button id="btn">Hide/Show</button>
+
+    <p id="test">Test Paragraph <b id="testbold">This is Bold</b></p>
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+
+    <button id="append">Append</button>
+  </body>
+</html>
