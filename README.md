@@ -25,7 +25,7 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 13 | 06/09/26 | Session-4     | JS: Async JavaScript, HTML DOM, Browser BOM & Web APIs    |
 | Day 14 | 07/09/26 | Session-4     | JS: AJAX, JSON, Practical Examples & Jquery : Basics      |
 | Day 15 | 08/09/26 | Session-4 & 5 | Jquery : Effects. Actions, Traversing, Properties         |
-|                                   | JS : Tasks,                                               |
+|        |          |               | JS : Tasks & OOPs Concepts                                |
 
 ## 🎯 Purpose
 
