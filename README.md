@@ -26,7 +26,7 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 14 | 07/09/26 | Session-4     | JS: AJAX, JSON, Practical Examples & Jquery : Basics      |
 | Day 15 | 08/09/26 | Session-4 & 5 | Jquery : Effects. Actions, Traversing, Properties         |
 |        |          |               | JS : Tasks & OOPs Concepts                                |
-| Day 16 | 09/09/26 | Session-6     | SQL : Concepts and Practice                               |
+| Day 16 | 09/09/26 | Session-6     | SQL : Commands, Joins, Aggregrate Functions & Operators   |
 
 ## 🎯 Purpose
 
