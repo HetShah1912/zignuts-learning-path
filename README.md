@@ -30,6 +30,10 @@ A collection of my **learning path assignments, practice code, projects, notes, 
 | Day 17 | 10/09/26 | Session-6.1   | MySQL : Keys, Queries, Index, Join, RDBMSvsNOSQL, with Python |
 | Day 17 | 11/09/26 | -             | Mid Semester Exam                                             |
 | Day 18 | 12/09/26 | -             | Mid Semester Exam                                             |
+| Day 19 | 13/09/26 | -             | -                                                             |
+| Day 20 | 14/09/26 | Session-6.1   | MySQL Exercise                                                |
+| Day 21 | 15/09/26 | -             | -                                                             |
+| Day 22 | 16/09/26 | -             | Mid Semester Exam                                             |
 
 ## 🎯 Purpose
 
