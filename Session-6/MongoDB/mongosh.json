@@ -1,0 +1,188 @@
+db.cars.aggregate(
+  [
+    {
+      $group: {_id:"$fuel_type",
+      TotalCars:{$sum:1}}
+    }
+  ]
+)
+
+
+db.cars.aggregate(
+  [
+    {
+      $match: {
+          maker:"Hyundai"
+      }
+    },
+    {
+      $project: {
+        _id:0,
+        maker:1,
+        model:1,
+        fuel_type:1
+      }
+    },
+    {
+      $sort: {
+        model:1
+      }
+    }
+  ]
+)
+
+db.cars.aggregate([
+  {
+    $match: {maker:"Hyundai"}
+  },
+  {
+    $project:{
+      _id:0,
+      carName: {$toUpper:{$concat:[
+        "$maker"," ". "$model"
+      ]}}
+    }
+  },
+  {
+    $out:"Hyundai Cars"
+  }
+])
+
+db.cars.aggregate({
+  $project: {
+    _id:0, 
+    model:1, 
+    isDiesel: {
+      $regexMatch:{
+        input:"$fuel_type",
+        regex:"Die"
+      }
+    }
+  }
+})
+
+db.cars.aggregate([
+  {
+    $project:{
+      _id:0,
+      model:1,
+      price:1
+    }
+  },
+  {
+    $addFields:{
+      price_in_lakhs: {
+        $concat: [{
+          $toString: {
+            $divide: [$price, 100000]
+          }
+        }," ", "Lakh"]
+      }
+    }
+  }
+])
+
+db.cars.aggregate([
+  {
+    $match: {maker: "Hyundai"}
+  },
+  {
+    $addFields: {
+      total_service_cost: {
+        $sum: "$service_history.cost"
+      }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      model: 1,
+      total_service_cost: 1
+    }
+  }
+])
+
+db.cars.aggregate([
+  {
+    $project: {
+      _id:0,
+      maker:1,
+      model:1,
+      fuel_category:{
+        $cond:{
+          if:{
+            $eq: ["$fuel_type", "Petrol"]
+          },
+          then: "Petrol Car",
+          else: "Non Petrol Car"
+        }
+      }
+    }
+  }
+])
+
+db.cars.aggregate([
+  {
+    $project:{
+      _id:0,
+      model:1,
+      maker:1,
+      budget_category:{
+        $switch:{
+          branches: [
+            {
+              case:{
+                $lt: ["$price",500000]
+              }, 
+              then: "Budget",
+              case:{
+                $and: [
+                  {$gte: ["$price",500000]},
+                  {$lt : ["$price",1000000]}
+                ]
+              },
+              then: "MidRange",
+              case:{
+                $gte: ["$price", 1000000]
+              },
+              then: "Premium",
+            }
+          ],
+          default: "None"
+        }
+      }
+    }
+  }
+])
+
+db.car.aggregate({
+  $project: {
+    _id:0,
+    model:1,
+    date:"$$NOW"
+  }
+})
+
+db.users.aggregate([{
+  $lookup:{
+    "from":"orders",
+    "localField":"_id",
+    "foreignField":"user_id"
+    as:"orders"
+  }
+}])
+
+db.createCollection("invitees",{
+  validator: {
+    $jsonSchema : {
+      bsonType : "object",
+      required : [name,phone],
+      properties : {
+        name : {
+          bsonType: "string",
+          description: "Username should be string"
+        }
+      }
+    }
+  }
+})
