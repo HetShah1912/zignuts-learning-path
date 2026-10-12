@@ -1,0 +1,333 @@
+
+{
+  "store": {
+    "store_id": "STR-1001",
+    "name": "TechZone Electronics",
+    "location": {
+      "country": "India",
+      "state": "Gujarat",
+      "city": "Ahmedabad",
+      "address": {
+        "building": "Tech Plaza",
+        "street": "CG Road",
+        "pincode": "380009"
+      }
+    },
+    "contact": {
+      "email": "support@techzone.example",
+      "phone": "+91-9876543210"
+    },
+    "settings": {
+      "currency": "INR",
+      "tax_rate": 18,
+      "free_shipping_threshold": 2000,
+      "return_policy_days": 7
+    }
+  },
+  "customers": [
+    {
+      "customer_id": "CUS-101",
+      "name": "Rahul Patel",
+      "email": "rahul@example.com",
+      "is_active": true,
+      "membership": {
+        "level": "Gold",
+        "points": 1250,
+        "discount_percentage": 10
+      },
+      "addresses": [
+        {
+          "type": "home",
+          "city": "Ahmedabad",
+          "pincode": "380015",
+          "is_default": true
+        },
+        {
+          "type": "office",
+          "city": "Gandhinagar",
+          "pincode": "382010",
+          "is_default": false
+        }
+      ],
+      "preferences": {
+        "categories": ["Laptops", "Mobiles", "Accessories"],
+        "notifications": {
+          "email": true,
+          "sms": false,
+          "whatsapp": true
+        }
+      }
+    },
+    {
+      "customer_id": "CUS-102",
+      "name": "Priya Shah",
+      "email": "priya@example.com",
+      "is_active": true,
+      "membership": {
+        "level": "Silver",
+        "points": 650,
+        "discount_percentage": 5
+      },
+      "addresses": [
+        {
+          "type": "home",
+          "city": "Surat",
+          "pincode": "395007",
+          "is_default": true
+        }
+      ],
+      "preferences": {
+        "categories": ["Headphones", "Smartwatches"],
+        "notifications": {
+          "email": true,
+          "sms": true,
+          "whatsapp": false
+        }
+      }
+    }
+  ],
+  "products": [
+    {
+      "product_id": "PRD-001",
+      "name": "Gaming Laptop",
+      "category": {
+        "main": "Electronics",
+        "sub": "Computers",
+        "tags": ["gaming", "laptop", "high-performance"]
+      },
+      "price": {
+        "mrp": 85000,
+        "selling_price": 74999,
+        "currency": "INR",
+        "tax_percentage": 18
+      },
+      "inventory": {
+        "stock": 25,
+        "warehouse": "AMD-01",
+        "reorder_level": 5,
+        "in_stock": true
+      },
+      "specifications": {
+        "processor": "Intel Core i7",
+        "ram_gb": 16,
+        "storage": {
+          "type": "SSD",
+          "capacity_gb": 1024
+        },
+        "graphics": {
+          "brand": "NVIDIA",
+          "model": "RTX 4060",
+          "vram_gb": 8
+        }
+      },
+      "ratings": {
+        "average": 4.7,
+        "total_reviews": 238,
+        "distribution": {
+          "5": 180,
+          "4": 35,
+          "3": 12,
+          "2": 6,
+          "1": 5
+        }
+      },
+      "available": true
+    },
+    {
+      "product_id": "PRD-002",
+      "name": "Wireless Headphones",
+      "category": {
+        "main": "Electronics",
+        "sub": "Audio",
+        "tags": ["wireless", "bluetooth", "headphones"]
+      },
+      "price": {
+        "mrp": 4999,
+        "selling_price": 3499,
+        "currency": "INR",
+        "tax_percentage": 18
+      },
+      "inventory": {
+        "stock": 120,
+        "warehouse": "SRT-02",
+        "reorder_level": 20,
+        "in_stock": true
+      },
+      "specifications": {
+        "connectivity": ["Bluetooth 5.3", "USB-C"],
+        "battery": {
+          "capacity_mah": 500,
+          "playtime_hours": 40
+        },
+        "features": ["ANC", "Fast Charging", "Built-in Microphone"]
+      },
+      "ratings": {
+        "average": 4.3,
+        "total_reviews": 156,
+        "distribution": {
+          "5": 90,
+          "4": 40,
+          "3": 15,
+          "2": 7,
+          "1": 4
+        }
+      },
+      "available": true
+    },
+    {
+      "product_id": "PRD-003",
+      "name": "Smartwatch",
+      "category": {
+        "main": "Electronics",
+        "sub": "Wearables",
+        "tags": ["watch", "fitness", "health-tracking"]
+      },
+      "price": {
+        "mrp": 7999,
+        "selling_price": 5999,
+        "currency": "INR",
+        "tax_percentage": 18
+      },
+      "inventory": {
+        "stock": 0,
+        "warehouse": "AMD-01",
+        "reorder_level": 10,
+        "in_stock": false
+      },
+      "specifications": {
+        "display": {
+          "type": "AMOLED",
+          "size_inches": 1.8
+        },
+        "sensors": ["Heart Rate", "SpO2", "Accelerometer"],
+        "water_resistance": "5 ATM"
+      },
+      "ratings": {
+        "average": 4.1,
+        "total_reviews": 87,
+        "distribution": {
+          "5": 42,
+          "4": 25,
+          "3": 12,
+          "2": 5,
+          "1": 3
+        }
+      },
+      "available": false
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ORD-5001",
+      "customer_id": "CUS-101",
+      "order_date": "2026-10-05T14:30:00",
+      "status": "delivered",
+      "items": [
+        {
+          "product_id": "PRD-001",
+          "quantity": 1,
+          "unit_price": 74999,
+          "discount_percentage": 10
+        },
+        {
+          "product_id": "PRD-002",
+          "quantity": 2,
+          "unit_price": 3499,
+          "discount_percentage": 0
+        }
+      ],
+      "payment": {
+        "method": "UPI",
+        "status": "paid",
+        "transaction_id": "TXN-90001"
+      },
+      "shipping": {
+        "carrier": "Express Delivery",
+        "tracking_id": "TRK-123456",
+        "delivery_address": {
+          "city": "Ahmedabad",
+          "pincode": "380015"
+        },
+        "delivered_at": "2026-10-08T11:45:00"
+      },
+      "price_summary": {
+        "subtotal": 81997,
+        "discount": 7499.9,
+        "shipping_fee": 0,
+        "tax": 13409.48,
+        "grand_total": 87906.58
+      }
+    },
+    {
+      "order_id": "ORD-5002",
+      "customer_id": "CUS-102",
+      "order_date": "2026-10-09T10:15:00",
+      "status": "processing",
+      "items": [
+        {
+          "product_id": "PRD-002",
+          "quantity": 1,
+          "unit_price": 3499,
+          "discount_percentage": 5
+        }
+      ],
+      "payment": {
+        "method": "Credit Card",
+        "status": "paid",
+        "transaction_id": "TXN-90002"
+      },
+      "shipping": {
+        "carrier": null,
+        "tracking_id": null,
+        "delivery_address": {
+          "city": "Surat",
+          "pincode": "395007"
+        },
+        "delivered_at": null
+      },
+      "price_summary": {
+        "subtotal": 3499,
+        "discount": 174.95,
+        "shipping_fee": 50,
+        "tax": 607.33,
+        "grand_total": 3981.38
+      }
+    }
+  ],
+  "coupons": [
+    {
+      "code": "WELCOME10",
+      "discount_type": "percentage",
+      "discount_value": 10,
+      "minimum_order_value": 1000,
+      "maximum_discount": 2000,
+      "is_active": true
+    },
+    {
+      "code": "FREESHIP",
+      "discount_type": "fixed",
+      "discount_value": 0,
+      "minimum_order_value": 2000,
+      "maximum_discount": 100,
+      "is_active": true,
+      "benefit": "free_shipping"
+    }
+  ],
+  "analytics": {
+    "total_customers": 2,
+    "total_products": 3,
+    "total_orders": 2,
+    "orders_by_status": {
+      "processing": 1,
+      "shipped": 0,
+      "delivered": 1,
+      "cancelled": 0
+    },
+    "revenue": {
+      "currency": "INR",
+      "gross_sales": 85995,
+      "total_discounts": 7674.85,
+      "total_shipping": 50
+    }
+  }
+}

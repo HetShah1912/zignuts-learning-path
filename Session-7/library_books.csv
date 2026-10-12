@@ -1,0 +1,11 @@
+book_id,title,author,genre,publication_year,available
+B001,Python Basics,John Smith,Programming,2022,True
+B002,Java Programming,Emily Davis,Programming,2021,True
+B003,The Alchemist,Paulo Coelho,Fiction,1988,True
+B004,Atomic Habits,James Clear,Self-help,2018,True
+B005,Clean Code,Robert C. Martin,Programming,2008,True
+B006,Harry Potter and the Philosopher's Stone,J. K. Rowling,Fantasy,1997,True
+B007,Ikigai,Héctor García and Francesc Miralles,Self-help,2016,True
+B008,Rich Dad Poor Dad,Robert T. Kiyosaki,Finance,1997,True
+B009,Introduction to Algorithms,Thomas H. Cormen et al.,Computer Science,2009,True
+B010,The Hobbit,J. R. R. Tolkien,Fantasy,1937,True

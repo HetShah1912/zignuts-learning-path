@@ -437,3 +437,344 @@
 # for i in range(1, 5):
 #   pass
 # print("Hello")
+
+# Lecture 6 
+# Functions and Recursion
+
+# a = 5
+# b = 10
+# sum = a + b
+# print(sum) when we want to sum on other numbers we have to repeat logic 
+
+# # Function Definition
+# def sumCalculation(a, b): # (param1, param2)
+#   sum = a + b
+#   return sum
+
+# print(sumCalculation(2,3)) # Function Call
+# print(sumCalculation(5,10)) # (arg1, arg2)
+# print(sumCalculation(7,3))
+# print(sumCalculation(2,9))
+
+# def printHello():
+#   print("Hello")
+
+# printHello()
+# # print(printHello())
+
+# # avearge of 3  
+# def avg(a, b, c):
+#   return ((a + b + c)/3)
+
+# print(avg(10,20,50))
+
+# # Default Argument
+# def calcProduct(a, b=2):
+#   return a*b
+
+# print(calcProduct(5))
+
+# # Recursion
+
+# # print n to 1 backwards
+# def show(n):
+#   if(n == 0): # Base Case
+#     return
+#   print(n)
+#   show(n-1)
+
+# show(8)
+
+# # factorial of n
+# def fact(n):
+#   if(n==0 or n==1):
+#     return 1
+#   return n * fact(n-1)
+
+# print(fact(5))
+
+
+
+
+
+
+
+
+
+# # Lecture 7 
+# # File Input/Output
+
+# # Text File : .txt, .docx, .log 
+# # Binary File : .mp4, .mov, .png, .jpeg
+
+# # r for read
+# # w for write(overwrite)
+# # x for create new file and open for write
+# # a for append
+# # b for binary mode
+# # t for text mode
+# # + for open disk file for updating
+
+# # text mode is default if we want to read binary we have to combine r and b as rb
+
+# # read file
+# with open("demo.txt", "r") as file:
+#   # data = file.read() # read whole file
+#   # data = file.read(5) # read first 5 words
+#   # print(data)
+#   # print(type(data))
+#   line1 = file.readline() # read first line
+#   print(line1)
+#   line2 = file.readline() # read first line
+#   print(line2)
+#   file.close()
+# print("Closed File")
+
+# # write file
+# with open("demo.txt", "a") as file:
+#   data = "\nI will try my best"
+#   file.write(data)
+#   file.close()
+
+
+# # read + write
+# with open("demo.txt", "r+") as file:
+#   # data = "\Trying New Things"
+#   # file.write(data)
+#   print(file.read())
+#   file.close()
+#   # r+ : read + overwrite (start) no truncate
+#   # w+ : read + overwrite (start) truncate
+#   # a+ : read + append (end) no truncate
+
+# Delete a file
+# import os
+# os.remove("temp.txt")
+
+
+
+
+
+
+
+
+
+# # Lecture 8 OOPS
+
+# # Class and Objects
+# class Student:  
+#   fullName = "anonymous" # Class Attribute
+#   # collegeName = "Indus University" 
+
+#   # Default Constructor
+#   def __init__(self):
+#     print("Hello")
+
+#   # Parameterized Constructor which overrides default one
+#   def __init__(self, fullName, marks):
+#     self.fullName = fullName # self is reference of current object which represents instance attribute
+#     self.marks = marks
+
+#   def printName(self):
+#     print("Name : ", self.fullName)
+
+#   def printMarks(self):
+#     print("Marks : ", self.marks)
+
+#   # static methods : don't use self parameter and works on class level
+#   @staticmethod
+#   def college():
+#     print("College Name : Indus")
+
+# s1 = Student("Het", 99)
+
+# # print(s1.fullName)
+# # print(s1.marks)
+
+# # s2 = Student("Arjuna", 99)
+# # print(s2.fullName)
+# # print(s2.marks)
+
+# # print(Student.collegeName) # class attribute can be accessed by class name
+# # print(s1.collegeName)
+# # print(s2.collegeName)
+
+# # print(s1.fullName) # print object attribute value because it has higher precedence 
+# # class and object attribute can be same
+
+# s1.printName()
+# s1.printMarks()
+# s1.college()
+
+
+# # Abstraction : Hiding unnecessary details
+# class Car:
+#   def __init__(self):
+#     self.acc = False
+#     self.brk = False
+#     self.clutch = False
+  
+#   def start(self):
+#     self.clutch = True
+#     self.acc = True
+#     print("Car Started")
+
+# car1 = Car()
+# car1.start()
+
+# # Encapsulation : Wrap data and functions into single unit
+
+
+
+
+
+
+
+
+
+# # Lecture 9
+# # del keyword : delete object or object props
+
+# class Student:
+#   def __init__(self, name):
+#     self.name = name 
+
+# s1 = Student("Het")
+# print(s1.name)
+# del s1
+# print(s1)
+
+# Private Attributes : __ in front of data
+class Account:
+  def __init__(self, acc_no, pwd):
+    self.acc_no = acc_no
+    self.__pwd = pwd # Private Property
+  
+  def show_pass(self):
+    print(self.__pwd)
+
+acc1 = Account(101, "Het@2005")
+print(acc1.acc_no)
+# print(acc1.__pwd) # can't acess outside class
+acc1.show_pass()
+
+class Person:
+  # __name = "anonymous"
+  def __hello(self): # Private Method
+    print("Hello")
+
+  def welcome(self):
+    self.__hello()
+
+p1 = Person()
+p1.welcome()
+
+# Single Inheritance
+
+class Car:
+  def __init__(self, type):
+    self.type = type
+  @staticmethod
+  def start():
+    print("Car Started")
+  
+  @staticmethod
+  def stop():
+    print("Car Stopped")
+
+class Toyota(Car):
+  def __init__(self, name, type):
+    # super method used to access methods of parent class
+    super().__init__(type)
+    super().start()
+    self.name = name
+
+c1 = Toyota("Prius", "Electric")
+print(c1.name)
+print(c1.type)
+
+# car1 = Toyota("Fortuner")
+# car2 = Toyota("Prius")
+
+# print(car1.name)
+# car1.start()
+
+# Multi Level Inheritance
+class Fortuner(Toyota):
+  def __init__(self, type):
+    self.type = type
+
+# car1 = Fortuner("Diesel")
+# car1.start()
+
+# Multiple Inheritance
+class A:
+  varA = "Welcome to A"
+class B:
+  varB = "Welcome to B"
+class C(A, B):
+  varC = "Welcome to C"
+
+c1 = C()
+print(c1.varC)
+print(c1.varB)
+print(c1.varA)
+
+# class Method : bound to class & receive class as implicit first argument
+class Person:
+  name = "anonymous"
+  # def changeName(self, name):
+  #   self.name = name # new name created inside object, does not chnage class attribute
+  #   Person.name = name # 1st way that chnages class attribute
+  #   self.__class__.name = name # 2nd way that changes class attribute
+
+  @classmethod
+  def changeName(cls, name):
+    cls.name = name # change actual class variable name
+
+
+p1 = Person()
+print(p1.name)
+p1.changeName("Het")  
+print(p1.name) 
+# print(Person.name)
+
+# Property Decorator
+class Student:
+  def __init__(self, phy, chem, math):
+    self.phy = phy
+    self.chem = chem
+    self.math = math
+    # self.pct = str((self.phy + self.chem + self.math)/3) + " %"
+  
+  # def calculatePCT(self): # first approach to change calculated attribute value
+  #   self.pct = str((self.phy + self.chem + self.math)/3) + " %"
+
+  @property # second approch evereytime any attribute change, the value of percentage changes
+  def percentage(self):
+    return (str((self.phy + self.chem + self.math)/3) + " %")
+
+s1 = Student(98, 97, 99)
+# print(s1.pct)
+print(s1.percentage) 
+
+# we want to change phy marks it can be change directly but pct is calculated from initial marks so it does not changed 
+s1.phy = 86
+# print(s1.pct)
+# s1.calculatePCT() # 1st approach
+# print(s1.pct)
+print(s1.percentage)
+
+# Polymorphism : Single thing have multiple forms
+
+# Operator Overloading : same operator have different meaning according to context
+
+# Implicit Overloading
+print(1 + 2) # Addition
+print("Hello" + "World") # Concetenate
+print([1, 2, 3] + [4, 5, 6]) # Merge
+
+# + have different meaning in above case, example of polymorphism same thing different meaning
+
+# Explicit Overlaoding
+# Complex Numbers : Real Number + Imaginary Number like 3i + 4j
