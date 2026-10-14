@@ -4,14 +4,17 @@
 # runtime.
 
 import mysql.connector
+import os
+from dotenv import load_dotenv
 
-
+load_dotenv()
 class BankAccount:
     def __init__(self):
         self.conn = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="MySQL@2005",
+            host = "127.0.0.1",
+            port = 3306,
+            user = os.getenv("DB_USER"),
+            password = os.getenv("DB_PASSWORD"),
             database="bank_db"
         )
         self.cursor = self.conn.cursor()
@@ -44,7 +47,7 @@ class BankAccount:
         try:
             account_id = int(input("Enter account ID: "))
             query = "SELECT account_holder, balance FROM accounts WHERE account_id = %s"
-            self.cursor.execute(query, (account_id,))
+            self.cursor.execute(query, (account_id))
             account = self.cursor.fetchone()
 
             if account:
