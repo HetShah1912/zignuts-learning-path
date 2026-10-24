@@ -1,0 +1,82 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs World</title>
+    <link
+      href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:600,800"
+      rel="stylesheet" />
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="blog-header-logo text-dark" href="/">Blogs World</a>
+          </div>
+          <div class="col-4">
+            <form action="{% url 'search' %}" method="GET">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="keyword"
+                  placeholder="Enter search term..." />
+                <button
+                  type="submit"
+                  class="btn btn-warning"
+                  id="button-search"
+                  type="button">
+                  Go
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            {% if not user.is_authenticated %}
+            <a class="btn btn-warning" href="{% url 'login' %}">Login</a> &nbsp;
+            <a class="btn btn-outline-secondary" href="{% url 'register'%}"
+              >Register</a
+            >
+            {% else %}
+            <span
+              ><a href="{% url 'dashboard' %}" class="btn btn-warning"
+                >Dashboard</a
+              ></span
+            >
+            &nbsp;
+            <span
+              ><a class="btn btn-outline-secondary" href="{% url 'logout' %}"
+                >Logout</a
+              ></span
+            >
+            {% endif %}
+          </div>
+        </div>
+      </header>
+
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          {% for category in categories %}
+          <a
+            class="p-2 text-muted"
+            href="{% url 'posts_by_category' category.id %}"
+            >{{ category.category_name }}</a
+          >
+          {% endfor %}
+        </nav>
+      </div>
+
