@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'employees',
     'blogs',
     'django_filters',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -133,4 +134,16 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS' : ['django_filters.rest_framework.DjangoFilterBackend'],
     'SEARCH_PARAM' : 'q',
     'ORDERING_PARAM' : 'order',
+    'DEFAULT_AUTHENICATION_CLASSES' : (
+      'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES' : (
+      'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
 }
+
+# from datetime import timedelta
+# SIMPLE_JWT = {
+#   'ACCESS_TOKEN_LIFETIME' : timedelta(minutes=60), # Default is 5 min
+#   'REFRESH_TOKEN_LIFETIME' : timedelta(days=1),
+# }

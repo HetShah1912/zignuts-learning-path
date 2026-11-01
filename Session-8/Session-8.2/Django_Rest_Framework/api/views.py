@@ -15,6 +15,9 @@ from blogs.serializers import BlogSerializer, CommentSerializer
 from .paginations import CustomPagination
 from employees.filters import EmployeeFilter
 from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 
 # Create your views here.
 @api_view(['GET', 'POST'])
@@ -198,3 +201,14 @@ class CommentDetailView(generics.RetrieveUpdateDestroyAPIView):
   queryset = Comment.objects.all()
   serializer_class = CommentSerializer
   lookup_field = 'pk'
+
+
+# JWT Authentication
+
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticatedOrReadOnly])
+def post_list(request):
+  if request.method == 'GET':
+    return Response({'message': "GET Response OK"}) 
+  if request.method == 'POST':
+    return Response({'message' : f"Data created by {request.user.username}"})

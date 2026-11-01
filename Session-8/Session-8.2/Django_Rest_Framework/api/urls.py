@@ -3,6 +3,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from . import views
 
+
 router = DefaultRouter()
 router.register('employees', views.EmployeeViewset, basename='employee')
 
@@ -17,4 +18,5 @@ urlpatterns = [
   path('comments/', views.CommentsView.as_view()),
   path('blogs/<int:pk>/', views.BlogDetailView.as_view()),
   path('comments/<int:pk>/', views.CommentDetailView.as_view()),
+  path('posts/', views.post_list, name='post_list')
 ]
